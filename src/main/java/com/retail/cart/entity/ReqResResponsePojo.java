@@ -14,6 +14,5 @@ public class ReqResResponsePojo {
     private int total;
     @JsonProperty("totalPages")
     private int total_pages;
-    //private ReqResGetPojo data;
     private List<ReqResGetPojo> data;
 }

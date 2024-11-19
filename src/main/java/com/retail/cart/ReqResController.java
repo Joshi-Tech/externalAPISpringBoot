@@ -23,9 +23,7 @@ public class ReqResController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<?> postUser(@RequestParam String name, @RequestParam String job ) {
+    public ResponseEntity<?> postUser(@RequestParam String name, @RequestParam String job) {
         return reqResServices.createUser(name, job);
     }
-
-
 }

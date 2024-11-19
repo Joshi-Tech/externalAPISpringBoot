@@ -4,11 +4,9 @@ import com.retail.cart.entity.ReqResGetPojo;
 import com.retail.cart.entity.ReqResResponsePojo;
 import com.retail.cart.entity.SingleUserPojo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
@@ -38,7 +36,7 @@ public class ReqResServices {
     }
 
     public ResponseEntity<?> getSingleResponse(String id) {
-        String getUrl = BASE_URL +GET_ALL_USERS + id;
+        String getUrl = BASE_URL + GET_ALL_USERS + id;
         ResponseEntity<SingleUserPojo> response = restTemplate.exchange(
                 getUrl,
                 HttpMethod.GET,
@@ -48,11 +46,11 @@ public class ReqResServices {
         return ResponseEntity.ok(response.getBody());
     }
 
-    public ResponseEntity<?> createUser(String name, String job){
-        String url = BASE_URL+GET_ALL_USERS;
-        Map<String, String> requestBody= new  HashMap();
-        requestBody.put("name",name);
-        requestBody.put("job",job);
+    public ResponseEntity<?> createUser(String name, String job) {
+        String url = BASE_URL + GET_ALL_USERS;
+        Map<String, String> requestBody = new HashMap();
+        requestBody.put("name", name);
+        requestBody.put("job", job);
         ResponseEntity<Map> mapResponseEntity = restTemplate.postForEntity(url, requestBody, Map.class);
         return ResponseEntity.ok(mapResponseEntity.getBody());
     }

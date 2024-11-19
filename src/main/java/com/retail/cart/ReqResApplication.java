@@ -1,8 +1,6 @@
 package com.retail.cart;
 
 import com.retail.cart.entity.ReqResGetPojo;
-import com.retail.cart.services.ReqResServices;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -16,16 +14,12 @@ public class ReqResApplication {
     }
 
     @Bean
-    public ReqResGetPojo getPojo(){
+    public ReqResGetPojo getPojo() {
         return new ReqResGetPojo();
     }
 
     @Bean
-    public RestTemplate getRestPojo(){
+    public RestTemplate getRestPojo() {
         return new RestTemplate();
     }
-    public void reqResServices() {
-        new ReqResServices().getResponse();
-    }
-
 }
