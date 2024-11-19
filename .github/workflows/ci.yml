@@ -17,12 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Set up JDK 17 (for Spring Boot with Java 17)
+      # Set up JDK 17 using Adoptium (previously AdoptOpenJDK)
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'adoptopenjdk'
+          distribution: 'temurin'  # Use 'temurin' for Adoptium
 
       # Cache Maven dependencies to speed up builds
       - name: Cache Maven dependencies
