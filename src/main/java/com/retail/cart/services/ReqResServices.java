@@ -16,7 +16,7 @@ import java.util.Map;
 public class ReqResServices {
 
     private static final String BASE_URL = "https://reqres.in";
-    private static final String GET_ALL_USERS = "/api/users/";
+    private static final String GET_ALL_USERS = "/api/userss/";
 
     @Autowired
     private ReqResGetPojo reqResGetPojo;
