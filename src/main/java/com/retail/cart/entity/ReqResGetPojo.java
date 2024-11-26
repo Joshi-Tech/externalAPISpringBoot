@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ReqResGetPojo {
     private int id;
-    private String emaill;
+    private String email;
     @JsonProperty("first_name")
     private String firstName;
     @JsonProperty("last_name")
