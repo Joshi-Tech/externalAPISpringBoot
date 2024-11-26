@@ -25,7 +25,7 @@ public class ReqResServices {
     private RestTemplate restTemplate;
 
     public ResponseEntity<?> getResponse() {
-        String getUrl = BASE_URL + GET_ALL_USERS;
+        String getUrl = BASE_URL + GET_ALL_USERS+5;
         ResponseEntity<ReqResResponsePojo> response = restTemplate.exchange(
                 getUrl,
                 HttpMethod.GET,
